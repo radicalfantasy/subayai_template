@@ -1,0 +1,75 @@
+@import url("fontawesome-all.min.css");
+
+
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+body {
+	background: rgb(58, 58, 58);
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 25% 1fr;
+}
+
+section {
+    padding: 5% 5% 5% 5%;
+}
+
+	#header {
+		background: white;
+		position: sticky;
+		position: -webkit-sticky;
+    	top: 0;
+    	height: 100vh;
+    	box-sizing: border-box;	
+	}
+
+	#header ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	#content {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		background-color: #f8f8f8;
+		grid-template-areas: 
+			"main"
+			"about"
+			"blog" 
+	}
+
+	.item
+	{
+		background-color: #f8f8f8;
+	}
+
+	#main
+	{
+		grid-area: main;
+	}
+
+	#about
+	{
+		grid-area: about;
+	}
+
+    #blog
+	{
+		grid-area: blog;
+	}
+	
