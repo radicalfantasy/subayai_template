@@ -1,27 +1,27 @@
 @import url("fontawesome-all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@400;500;700;900&display=swap');
 
-
-.cf:before,
-.cf:after {
-    content: " "; 
-    display: table;
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
 
 body {
 	background: rgb(58, 58, 58);
+	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 	min-height: 100%;
 	display: grid;
-	grid-template-columns: 25% 1fr;
+	grid-template-columns: 23% 1fr;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 14px;
 }
 
 section {
@@ -32,20 +32,36 @@ section {
 		background: white;
 		position: sticky;
 		position: -webkit-sticky;
-    	top: 0;
-    	height: 100vh;
-    	box-sizing: border-box;	
+		font-family: 'Roboto', sans-serif;
+		padding-top: 3em;
+		padding-left: 3em;
+		height: 100vh;
+		box-sizing: border-box;	
 	}
 
 	#header ul {
 		margin: 0;
 		padding: 0;
+		font: inherit;
+	    font-size: 20px;
 		list-style-type: none;
+	}
+
+	#header > header h1 {
+		font-size: 1.75em;
+		margin: 0;
+	}
+
+	#header > header p {
+		color: #d2f2e9;
+		font-style: italic;
+		margin: 1em 0 0 0;
 	}
 
 	#content {
 		display: grid;
 		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
 		background-color: #f8f8f8;
 		grid-template-areas: 
 			"main"
@@ -58,18 +74,33 @@ section {
 		background-color: #f8f8f8;
 	}
 
-	#main
+	#content__main
 	{
 		grid-area: main;
+		background-color: red;
 	}
 
-	#about
+	#content__about
 	{
 		grid-area: about;
+		background-color: blue;
 	}
 
-    #blog
+    #content__blog
 	{
 		grid-area: blog;
 	}
 	
+	.cf:before,
+	.cf:after {
+	    content: " "; 
+	    display: table;
+	}
+
+	.cf:after {
+	    clear: both;
+	}
+
+	.cf {
+	    *zoom: 1;
+	}
